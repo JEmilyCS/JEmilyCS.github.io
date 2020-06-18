@@ -143,7 +143,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 11);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " TIME UNTIL OUR MOVING JOURNEY STARTS: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " TIME UNTIL WE EMBARK: ");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -297,6 +297,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           delta -= minutes * 60;
           var seconds = delta % 60; // in theory the modulus is not required
 
+          if (days < 0) days = 0;
+          if (hours < 0) hours = 0;
+          if (minutes < 0) minutes = 0;
+          if (seconds < 0) seconds = 0;
           return [days, hours, minutes, seconds];
         }
       }]);

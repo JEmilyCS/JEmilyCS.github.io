@@ -69,7 +69,7 @@ function AppComponent_div_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 10);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " TIME UNTIL OUR MOVING JOURNEY STARTS: ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " TIME UNTIL WE EMBARK: ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
@@ -156,6 +156,14 @@ class AppComponent {
         var minutes = Math.floor(delta / 60) % 60;
         delta -= minutes * 60;
         var seconds = delta % 60; // in theory the modulus is not required
+        if (days < 0)
+            days = 0;
+        if (hours < 0)
+            hours = 0;
+        if (minutes < 0)
+            minutes = 0;
+        if (seconds < 0)
+            seconds = 0;
         return [days, hours, minutes, seconds];
     }
 }
